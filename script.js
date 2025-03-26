@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             monkeyImage = "images/sad-monkey.gif"; // Ensure this file exists
         } else if (score.fancy >= score.thoughtful && score.fancy >= score.simple && score.fancy >= score.shocked && score.fancy >= score.cool && score.fancy >= score.sad) {
             monkeyType = "süslü maymun 🐒";
-            monkeyImage = "./images/süslü.GIF"; // Ensure this file exists
+            monkeyImage = "./images/süslü.GİF"; // Ensure this file exists
         }
 
         localStorage.setItem("monkeyResult", monkeyType);
