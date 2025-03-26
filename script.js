@@ -41,11 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
             monkeyType = "havali maymun 🐒";
             monkeyImage = "./images/havalı.gif"; // Ensure this file exists
         } else if (score.sad >= score.thoughtful && score.sad >= score.simple && score.sad >= score.shocked && score.sad >= score.cool && score.sad >= score.fancy) {
-            monkeyType = "./üzgün maymun 🐵";
-            monkeyImage = "images/sad-monkey.gif"; // Ensure this file exists
+            monkeyType = "üzgün maymun 🐵";
+            monkeyImage = "./images/sad-monkey.gif"; // Ensure this file exists
         } else if (score.fancy >= score.thoughtful && score.fancy >= score.simple && score.fancy >= score.shocked && score.fancy >= score.cool && score.fancy >= score.sad) {
             monkeyType = "süslü maymun 🐒";
-            monkeyImage = "./images/süslü.GİF"; // Ensure this file exists
+            monkeyImage = "./images/süsl.gif"; // Ensure this file exists
         }
 
         localStorage.setItem("monkeyResult", monkeyType);
