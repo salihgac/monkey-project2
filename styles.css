@@ -9,7 +9,7 @@ body {
 
 /* Quiz Page Background */
 body.quiz-page {
-    background-image: url('images/dönen.gif'); /* Replace with your monkey background image */
+    background-image: url('./images/dönen.gif'); /* Replace with your monkey background image */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
