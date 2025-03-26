@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Quiz Page Background */
+body.quiz-page {
+    background-image: url('images/dönen.gif'); /* Replace with your monkey background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9); /* Add transparency to the container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button, .start-button {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover, .start-button:hover {
+    background: #e68900;
+}
+
+/* Questions */
+.question {
+    margin: 20px 0;
+    text-align: left;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+/* Results Page */
+#resultText {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#resultImage {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 15px;
+    position: relative;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff9800, #e68900);
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Pop-up Modal Styles */
+.popup-modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* For the close button positioning */
+    animation: flashingBackground 1s infinite; /* Flashing background */
+}
+
+/* Flashing Background Animation */
+@keyframes flashingBackground {
+    0% { background-color: red; }
+    25% { background-color: yellow; }
+    50% { background-color: green; }
+    75% { background-color: blue; }
+    100% { background-color: red; }
+}
+
+/* Flashing Text Animation */
+@keyframes flashingText {
+    0% { color: white; }
+    25% { color: black; }
+    50% { color: white; }
+    75% { color: black; }
+    100% { color: white; }
+}
+
+.popup-content h2 {
+    font-size: 28px;
+    animation: flashingText 0.5s infinite; /* Flashing text */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.popup-close:hover {
+    color: red;
+}
+
+/* Animated Monkeys */
+.popup-monkey {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    animation: wave 1.5s infinite;
+}
+
+.popup-monkey.left {
+    left: -120px;
+}
+
+.popup-monkey.right {
+    right: -120px;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(-50%) rotate(-10deg); }
+    50% { transform: translateY(-50%) rotate(10deg); }
+}
+
+/* Button for triggering pop-up */
+.popup-trigger {
+    display: inline-block;
+    background: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.popup-trigger:hover {
+    background: #e64a19;
+}
+
+/* Monkey Rain Styles */
+#monkeyRain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through */
+    overflow: hidden;
+    z-index: 999; /* Ensure it appears above other elements */
+}
+
+.monkey {
+    position: absolute;
+    top: -50px; /* Start above the viewport */
+    font-size: 2rem; /* Adjust size of the monkey emoji */
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh); /* Fall to the bottom of the viewport */
+    }
+}

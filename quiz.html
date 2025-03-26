@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Which Monkey Are You?</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body class="quiz-page">
+    <div class="container">
+        <h1>Quiz Time!</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. How do you usually spend your free time?</p>
+                <label><input type="radio" name="q1" value="fancy"> Shopping for stylish clothes</label>
+                <label><input type="radio" name="q1" value="sad"> Listening to sad music alone</label>
+                <label><input type="radio" name="q1" value="cool"> Partying with friends</label>
+                <label><input type="radio" name="q1" value="thoughtful"> Reading a book or learning something new</label>
+            </div>
+
+            <div class="question">
+                <p>2. What is your ideal vacation?</p>
+                <label><input type="radio" name="q2" value="cool"> A luxury resort with a private pool</label>
+                <label><input type="radio" name="q2" value="fancy"> A trip to Paris for a fashion event</label>
+                <label><input type="radio" name="q2" value="sad"> A quiet retreat in the mountains</label>
+                <label><input type="radio" name="q2" value="simple"> A simple camping trip in nature</label>
+            </div>
+
+            <div class="question">
+                <p>3. How do your friends describe you?</p>
+                <label><input type="radio" name="q3" value="thoughtful"> Smart and deep thinker</label>
+                <label><input type="radio" name="q3" value="shocked"> Always surprised by everything</label>
+                <label><input type="radio" name="q3" value="simple"> Straightforward and no-nonsense</label>
+                <label><input type="radio" name="q3" value="cool"> Charismatic and fun</label>
+            </div>
+
+            <div class="question">
+                <p>4. What do you do in an awkward situation?</p>
+                <label><input type="radio" name="q4" value="shocked"> Look around confused</label>
+                <label><input type="radio" name="q4" value="cool"> Laugh it off smoothly</label>
+                <label><input type="radio" name="q4" value="sad"> Get embarrassed and stay silent</label>
+                <label><input type="radio" name="q4" value="thoughtful"> Analyze what just happened</label>
+            </div>
+
+            <div class="question">
+                <p>5. What kind of music do you like?</p>
+                <label><input type="radio" name="q5" value="cool"> Upbeat pop or hip-hop</label>
+                <label><input type="radio" name="q5" value="fancy"> Classical or jazz</label>
+                <label><input type="radio" name="q5" value="sad"> Melancholic or slow music</label>
+                <label><input type="radio" name="q5" value="simple"> Whatever is on the radio</label>
+            </div>
+
+            <div class="question">
+                <p>6. How do you dress?</p>
+                <label><input type="radio" name="q6" value="fancy"> Elegant and stylish</label>
+                <label><input type="radio" name="q6" value="cool"> Trendy but relaxed</label>
+                <label><input type="radio" name="q6" value="simple"> Simple and casual</label>
+                <label><input type="radio" name="q6" value="shocked"> I don’t really think about it</label>
+            </div>
+
+            <div class="question">
+                <p>7. What is your reaction to unexpected news?</p>
+                <label><input type="radio" name="q7" value="shocked"> I freeze in shock</label>
+                <label><input type="radio" name="q7" value="cool"> I stay cool and act like I knew it</label>
+                <label><input type="radio" name="q7" value="sad"> I get emotional about it</label>
+                <label><input type="radio" name="q7" value="thoughtful"> I try to process it logically</label>
+            </div>
+
+            <div class="question">
+                <p>8. What would you do at a party?</p>
+                <label><input type="radio" name="q8" value="cool"> Be the center of attention</label>
+                <label><input type="radio" name="q8" value="thoughtful"> Observe from the sidelines</label>
+                <label><input type="radio" name="q8" value="shocked"> Feel awkward and unsure</label>
+                <label><input type="radio" name="q8" value="simple"> Just enjoy my drink and chill</label>
+            </div>
+
+            <div class="question">
+                <p>9. What do you like to watch?</p>
+                <label><input type="radio" name="q9" value="fancy"> Fashion or reality shows</label>
+                <label><input type="radio" name="q9" value="cool"> Action or thriller movies</label>
+                <label><input type="radio" name="q9" value="sad"> Emotional dramas</label>
+                <label><input type="radio" name="q9" value="thoughtful"> Documentaries</label>
+            </div>
+
+            <div class="question">
+                <p>10. How do you deal with stress?</p>
+                <label><input type="radio" name="q10" value="cool"> Ignore it and move on</label>
+                <label><input type="radio" name="q10" value="sad"> Get overwhelmed</label>
+                <label><input type="radio" name="q10" value="thoughtful"> Think through solutions</label>
+                <label><input type="radio" name="q10" value="shocked"> Panic and feel lost</label>
+            </div>
+
+            <div class="question">
+                <p>11. What would you bring to a deserted island?</p>
+                <label><input type="radio" name="q11" value="fancy"> Stylish sunglasses</label>
+                <label><input type="radio" name="q11" value="thoughtful"> A survival book</label>
+                <label><input type="radio" name="q11" value="sad"> A photo album</label>
+                <label><input type="radio" name="q11" value="cool"> A speaker for music</label>
+            </div>
+
+            <div class="question">
+                <p>12. What describes you best?</p>
+                <label><input type="radio" name="q12" value="fancy"> Glamorous</label>
+                <label><input type="radio" name="q12" value="cool"> Confident</label>
+                <label><input type="radio" name="q12" value="shocked"> Easily surprised</label>
+                <label><input type="radio" name="q12" value="sad"> Emotional</label>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <button type="submit">See My Monkey Type!</button>
+        </form>
+
+        <!-- New Button -->
+        <button id="popupButton" class="popup-trigger">BANA TIKLAMA!</button>
+
+        <!-- Pop-up Modal -->
+        <div id="popupModal" class="popup-modal">
+            
+            <div class="popup-content">
+                <span id="closePopup" class="popup-close">&times;</span>
+                <h2>NİYE BASIYOSUN MAYMUN MUSUN ??</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monkey and Banana Rain Container -->
+    <div id="monkeyRain"></div>
+
+    <script>
+        // Pop-up JavaScript
+        document.addEventListener("DOMContentLoaded", function () {
+            const popupButton = document.getElementById("popupButton");
+            const popupModal = document.getElementById("popupModal");
+            const closePopup = document.getElementById("closePopup");
+
+            // Initialize sessionStorage for the pop-up
+            if (!sessionStorage.getItem("popupTriggered")) {
+                sessionStorage.setItem("popupTriggered", "false");
+            }
+
+            popupButton.addEventListener("click", function () {
+                popupModal.style.display = "flex"; // Show the modal
+                sessionStorage.setItem("popupTriggered", "true"); // Mark the pop-up as triggered
+            });
+
+            closePopup.addEventListener("click", function () {
+                popupModal.style.display = "none"; // Hide the modal
+            });
+
+            window.addEventListener("click", function (event) {
+                if (event.target === popupModal) {
+                    popupModal.style.display = "none"; // Hide the modal if clicked outside
+                }
+            });
+
+            // Prevent the pop-up from showing on page refresh
+            if (sessionStorage.getItem("popupTriggered") === "true") {
+                popupModal.style.display = "none";
+            }
+
+            // Monkey and Banana Rain Animation
+            window.addEventListener("scroll", function () {
+                const monkeyRain = document.getElementById("monkeyRain");
+                const emoji = document.createElement("div");
+
+                // Randomly choose between a monkey or a banana
+                emoji.textContent = Math.random() > 0.5 ? "🐵" : "🍌";
+                emoji.className = "monkey";
+                emoji.style.left = Math.random() * 100 + "vw"; // Random horizontal position
+                emoji.style.animationDuration = Math.random() * 2 + 3 + "s"; // Random fall duration
+                monkeyRain.appendChild(emoji);
+
+                // Remove the emoji after the animation ends
+                emoji.addEventListener("animationend", function () {
+                    emoji.remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
